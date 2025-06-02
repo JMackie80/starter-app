@@ -11,7 +11,8 @@
     "studio": "npx prisma studio",
     "seed": "npm run generate && prisma db seed",
     "build": "tsc",
-    "clean": "rm -rf dist && find . -name '*.js' -not -path './node_modules/*' -delete"
+    "clean": "rm -rf dist && find . -name '*.js' -not -path './node_modules/*' -delete",
+    "deploy": "npm i && npm migrate && npm generate"
   },
   "dependencies": {
     "@prisma/client": "^6.8.2",
