@@ -1,4 +1,4 @@
-export const SERVER_URL = 'https://starter-app-ntru.onrender.com/'
+export const SERVER_URL = window.location.host === 'localhost:3000' ? 'http://localhost:3001' : window.location.origin
 
 export const getAxiosConfig = () => ({
   headers: {
