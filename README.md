@@ -15,7 +15,6 @@ Welcome to the starter app.
 - middleware - custom express middleware  
 - controllers - controllers to process logic  
 - repositories - repositories to access data in a common way  
-- data - javascript objects to simiulate database data  
 - types - custom types  
 
 ## Server Get Started
