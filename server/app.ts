@@ -66,7 +66,7 @@ const corsOptions = {
 }
 
 app.use(express.json({ limit: '50mb' })) // Set limit to 50 megabytes
-app.use(cors(corsOptions))
+//app.use(cors(corsOptions))
 app.use(cookieParser())
 app.use(express.urlencoded({ extended: false }))
 app.use(passport.initialize())
