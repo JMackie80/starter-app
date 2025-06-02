@@ -42,4 +42,5 @@ Welcome to the starter app.
 - Styling could be improved on the client.
 - Files should be separated into folders for the client.
 - Roles should be implemented.
+- Should use Helmet, but didn't have time to work out the details.
 

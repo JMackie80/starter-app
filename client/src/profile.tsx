@@ -1,4 +1,4 @@
-import { Container, Row, Col } from 'reactstrap'
+import { Container, Row, Col, Card } from 'reactstrap'
 import { useQuery } from 'react-query'
 
 import './profile.css'
@@ -34,27 +34,33 @@ function Profile() {
   }
 
   if (!data) return (
-      <>
-        <section className="profile-readonly" aria-label="User Profile">
-          <div className="hero-text">
-            <h2>User Profile</h2>
-            <a href="#" onClick={handleProfileCreate} role="button">Create Profile</a>
-          </div>
-        </section>
-      </>
-    )
+    <>
+      <section className="profile-readonly" aria-label="User Profile">
+        <div className="hero-text">
+          <h2>User Profile</h2>
+          <a href="#" onClick={handleProfileCreate} role="button">Create Profile</a>
+        </div>
+      </section>
+    </>
+  )
 
   return (
     <Container>
       <Row>
         <Col>
           <section className="profile-readonly" aria-label="User Profile">
-            <div className="hero-text">
+            <div>
               <h2>User Profile</h2>
-              <a href="#" onClick={handleProfileUpdate} role="button">Edit Profile</a>
-              <a href="#" onClick={handleProfileDelete} role="button">Delete Profile</a>
             </div>
-            <ProfileCard {...data} />
+              <Card>
+                <div className="card-body">
+                  <ProfileCard data={data} />
+                </div>
+                <div className="buttons card-footer">
+                  <a href="#" onClick={handleProfileUpdate} role="button">Edit Profile</a>
+                  <a href="#" onClick={handleProfileDelete} role="button">Delete Profile</a>
+                </div>
+              </Card>
           </section>
         </Col>
       </Row>
