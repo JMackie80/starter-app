@@ -34,11 +34,18 @@ router.get('/logout', (req: Request, res: Response, next: NextFunction) => {
 
 router.post('/signUp', 
   validateRequestSchema(signUpSchema), 
-  async (req: Request, res: Response, next: NextFunction) => {
+  async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
+      if (req.body.password !== req.body.confirmPassword) {
+        res.status(400).json({ error: 'Passwords do not match' })
+        return
+      }
+      
+      delete req.body.confirmPassword
       await userController.createUser(req.body)
       res.status(201).json({ success: true })
     } catch (error) {
+      console.error('error', error)
       handleError(error, next)
     }
   }

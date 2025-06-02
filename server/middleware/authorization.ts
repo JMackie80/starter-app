@@ -58,19 +58,3 @@ export const isAdmin: RequestHandler = compose([
     next()
   }
 ])
-
-/**
- * Middleware to check if the user is an admin or the owner of the resource.
- * Ensures the user is verified, has valid user data, and is either an admin or the owner.
- * Responds with a 403 Forbidden status if neither condition is met.
- */
-export const isAdminOrSelf: RequestHandler = compose([
-  ...verifyUserAndRefreshToken,
-  (req: Request, res: Response, next: NextFunction) => {
-    if (!(req.user as UserType)?.isAdmin && req.params.userId !== (req.user as UserType)?.userId) {
-      return res.status(403).json({ message: 'Forbidden: Access is denied' })
-    }
-
-    next()
-  }
-])

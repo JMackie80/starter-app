@@ -29,21 +29,21 @@ export const password = z.string()
 export const validateRequestSchema = (schema: RequestSchema) => {
   return (req: Request, res: Response, next: NextFunction) => {
     if (schema.params) {
-      const result = schema.params.strip().safeParse(req.params)
+      const result = schema.params.strict().safeParse(req.params)
       if (!result.success) {
         return throwSchemaError(result as z.SafeParseError<any>, next)
       }
     }
 
     if (schema.query) {
-      const result = schema.query.strip().safeParse(req.query)
+      const result = schema.query.strict().safeParse(req.query)
       if (!result.success) {
         return throwSchemaError(result as z.SafeParseError<any>, next)
       }
     }
 
     if (schema.body) {
-      const result = schema.body.strip().safeParse(req.body)
+      const result = schema.body.strict().safeParse(req.body)
       if (!result.success) {
         return throwSchemaError(result as z.SafeParseError<any>, next)
       }

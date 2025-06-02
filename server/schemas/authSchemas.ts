@@ -12,6 +12,7 @@ export const loginSchema = {
 export const signUpSchema = {
     body: z.object({
         email: email,
-        password: password
+        password: password,
+        confirmPassword: password
     })
 }

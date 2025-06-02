@@ -1,0 +1,46 @@
+.not-found-section {
+    max-width: 500px;
+    margin: 4rem auto;
+    padding: 3rem 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  
+  .not-found-section h1 {
+    font-size: 6rem;
+    color: black;
+    margin: 0;
+    font-weight: 900;
+  }
+  
+  .not-found-section h2 {
+    font-size: 1.8rem;
+    margin: 1rem 0 0.5rem;
+    font-weight: 700;
+  }
+  
+  .not-found-section p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  .back-home {
+    display: inline-block;
+    text-decoration: none;
+    background-color: black;
+    color: #dad122;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-home:hover {
+    background-color: black;
+  }
+  

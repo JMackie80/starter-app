@@ -8,7 +8,6 @@ const prisma = new PrismaClient()
 
 async function main() {
   const adminPassword = process.env.ADMIN_PASSWORD
-  console.log('adminPassword', adminPassword)
   if (!adminPassword) {
     throw new Error('Password is required to create a user.')
   }

@@ -30,9 +30,8 @@ router.get('/:email', validateRequestSchema(getUserSchema), async (req: Request,
 
 router.post('/', validateRequestSchema(postUserSchema), async (req: Request, res: Response, next: NextFunction) => {
     try {
-        console.log('Creating user with data:', req.body)
         const result = await userController.createUser(req.body)
-        res.json(result)
+        res.status(201).json(result)
     } catch (error) {
         handleError(error, next)
     }

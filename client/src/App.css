@@ -1,0 +1,84 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+.card-body > .card-title {
+  font-family: 'Lobster', cursive;
+}
+
+.card-title {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+h2 {
+  color: #383a43;
+}
+
+.card-img-overlay .card-title {
+  color: #383a43;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.row-content {
+  padding: 50px 0;
+  border-bottom: 1px ridge;
+  min-height: 200px;
+}
+
+.site-footer {
+  background-image: linear-gradient(#dad122, #dad122, #dad75a);
+  padding: 20px 0;
+  margin-top: 2rem;
+}
+
+.navbar-brand {
+  max-width: 4rem;
+  margin-right: 2rem;
+}
+
+.navbar-brand img {
+  width: 100%;
+  height: 100%;
+  margin-right: 2rem;
+  max-width: 4rem;
+}
+
+.navbar-light {
+  background-color: #dad122;
+  background-image: linear-gradient(#dad75a, #dad122, #dad122);
+  margin-bottom: 2rem;
+  min-height: 8rem;
+}
+
+.page-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: 300ms ease-out;
+}
+
+.page-exit {
+  opacity: 1;
+}
+
+.page-exit-active {
+  opacity: 0;
+  transition: 300ms ease-in;
+}
+
+pre {
+  white-space: pre-wrap;
+  background-color: #f4f4f4;
+  padding: 10px;
+  border: 1px solid #ccc;
+  max-height: 500px;
+  overflow-y: auto;
+}

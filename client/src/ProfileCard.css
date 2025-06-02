@@ -1,0 +1,83 @@
+.profile-readonly {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  
+  .profile-readonly h2 {
+    color: black;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  .profile-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  
+  .profile-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid black;
+    background: #f0f0f0;
+  }
+  
+  .profile-details {
+    flex: 1;
+  }
+  
+  .profile-name {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 700;
+  }
+  
+  .profile-headline {
+    font-size: 1.1rem;
+    color: black;
+    margin: 0.5rem 0;
+  }
+  
+  .profile-bio {
+    margin: 0.75rem 0;
+    line-height: 1.5;
+  }
+  
+  .profile-interests {
+    color: #555;
+  }
+  
+  @media (max-width: 600px) {
+    .profile-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .profile-image {
+      margin-bottom: 1rem;
+    }
+  
+    .profile-details {
+      align-items: center;
+    }
+  }
+  
+  .hero-text a {
+    background-color: black;
+    color: #dad122;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
