@@ -48,7 +48,9 @@ const __dirname = dirname(__filename)
 const allowedOrigins = [
   process.env.CLIENT_URL,
   'http://localhost:3000',
-  'http://localhost:3001'
+  'http://localhost:3001',
+  'https://starter-app-ntru.onrender.com/',
+  'http://starter-app-ntru.onrender.com/'
 ];
 
 // Dynamic origin check
